@@ -5,7 +5,7 @@ import java.nio.file.Paths;
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
-public class ff {
+public class Main {
     public static void main(String[] args) throws IOException {
         // put your code here
         String input = new String(Files.readAllBytes(Paths.get(args[0])));
@@ -45,7 +45,7 @@ public class ff {
         String method = scanner.nextLine().strip();
         System.out.println();
 
-        String[] values = {"","",""};
+        String[] values;
         if (method.equalsIgnoreCase("ari")) {
             values = automatedReadabilityIndex(characters, totalWords, sentences.length);
         } else if (method.equalsIgnoreCase("fk")) {
